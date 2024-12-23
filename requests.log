@@ -1,0 +1,52 @@
+INFO @ 15.12.2024 21:37:59 : Starting synchronous requests for 25 numbers
+INFO @ 15.12.2024 21:37:59 : Request returned with status code 200
+INFO @ 15.12.2024 21:37:59 : Request returned with status code 200
+INFO @ 15.12.2024 21:38:00 : Request returned with status code 200
+INFO @ 15.12.2024 21:38:02 : Request returned with status code 200
+INFO @ 15.12.2024 21:38:04 : Request returned with status code 200
+INFO @ 15.12.2024 21:38:07 : Request returned with status code 200
+INFO @ 15.12.2024 21:38:10 : Request returned with status code 200
+INFO @ 15.12.2024 21:38:14 : Request returned with status code 200
+INFO @ 15.12.2024 21:38:19 : Request returned with status code 200
+INFO @ 15.12.2024 21:38:23 : Request returned with status code 200
+INFO @ 15.12.2024 21:38:27 : Request returned with status code 200
+INFO @ 15.12.2024 21:38:32 : Request returned with status code 200
+INFO @ 15.12.2024 21:38:37 : Request returned with status code 200
+INFO @ 15.12.2024 21:38:43 : Request returned with status code 200
+INFO @ 15.12.2024 21:38:50 : Request returned with status code 200
+INFO @ 15.12.2024 21:38:56 : Request returned with status code 200
+INFO @ 15.12.2024 21:39:02 : Request returned with status code 200
+INFO @ 15.12.2024 21:39:09 : Request returned with status code 200
+INFO @ 15.12.2024 21:39:16 : Request returned with status code 200
+INFO @ 15.12.2024 21:39:24 : Request returned with status code 200
+INFO @ 15.12.2024 21:39:33 : Request returned with status code 200
+INFO @ 15.12.2024 21:39:41 : Request returned with status code 200
+INFO @ 15.12.2024 21:39:49 : Request returned with status code 200
+INFO @ 15.12.2024 21:39:58 : Request returned with status code 200
+INFO @ 15.12.2024 21:40:08 : Request returned with status code 200
+INFO @ 15.12.2024 21:40:08 : Time taken for 25 requests: 129.06 seconds with sync
+INFO @ 15.12.2024 21:40:08 : {'n': '1', 'primes': []}
+INFO @ 15.12.2024 21:40:08 : {'n': '2', 'primes': []}
+INFO @ 15.12.2024 21:40:08 : {'n': '3', 'primes': [2]}
+INFO @ 15.12.2024 21:40:08 : {'n': '4', 'primes': [2, 3]}
+INFO @ 15.12.2024 21:40:08 : {'n': '5', 'primes': [2, 3]}
+INFO @ 15.12.2024 21:40:08 : {'n': '6', 'primes': [2, 3, 5]}
+INFO @ 15.12.2024 21:40:08 : {'n': '7', 'primes': [2, 3, 5]}
+INFO @ 15.12.2024 21:40:08 : {'n': '8', 'primes': [2, 3, 5, 7]}
+INFO @ 15.12.2024 21:40:08 : {'n': '9', 'primes': [2, 3, 5, 7]}
+INFO @ 15.12.2024 21:40:08 : {'n': '10', 'primes': [2, 3, 5, 7]}
+INFO @ 15.12.2024 21:40:08 : {'n': '11', 'primes': [2, 3, 5, 7]}
+INFO @ 15.12.2024 21:40:08 : {'n': '12', 'primes': [2, 3, 5, 7, 11]}
+INFO @ 15.12.2024 21:40:08 : {'n': '13', 'primes': [2, 3, 5, 7, 11]}
+INFO @ 15.12.2024 21:40:08 : {'n': '14', 'primes': [2, 3, 5, 7, 11, 13]}
+INFO @ 15.12.2024 21:40:08 : {'n': '15', 'primes': [2, 3, 5, 7, 11, 13]}
+INFO @ 15.12.2024 21:40:08 : {'n': '16', 'primes': [2, 3, 5, 7, 11, 13]}
+INFO @ 15.12.2024 21:40:08 : {'n': '17', 'primes': [2, 3, 5, 7, 11, 13]}
+INFO @ 15.12.2024 21:40:08 : {'n': '18', 'primes': [2, 3, 5, 7, 11, 13, 17]}
+INFO @ 15.12.2024 21:40:08 : {'n': '19', 'primes': [2, 3, 5, 7, 11, 13, 17]}
+INFO @ 15.12.2024 21:40:08 : {'n': '20', 'primes': [2, 3, 5, 7, 11, 13, 17, 19]}
+INFO @ 15.12.2024 21:40:08 : {'n': '21', 'primes': [2, 3, 5, 7, 11, 13, 17, 19]}
+INFO @ 15.12.2024 21:40:08 : {'n': '22', 'primes': [2, 3, 5, 7, 11, 13, 17, 19]}
+INFO @ 15.12.2024 21:40:08 : {'n': '23', 'primes': [2, 3, 5, 7, 11, 13, 17, 19]}
+INFO @ 15.12.2024 21:40:08 : {'n': '24', 'primes': [2, 3, 5, 7, 11, 13, 17, 19, 23]}
+INFO @ 15.12.2024 21:40:08 : {'n': '25', 'primes': [2, 3, 5, 7, 11, 13, 17, 19, 23]}
