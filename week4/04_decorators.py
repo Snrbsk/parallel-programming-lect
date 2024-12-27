@@ -34,9 +34,7 @@ def performance(func):
 def say_hi():
     for i in range(1,100):
         for j in range(1,100):
-            for k in range(1,100):
-                for h in range(1,100):
-                    print("",end="")
+            print("",end="")
 
 say_hi()
 say_hi()

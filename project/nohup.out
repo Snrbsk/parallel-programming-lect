@@ -1,0 +1,19 @@
+python: can't open file '/Users/sonerbasak/Desktop/Codes/collage/parallel-programming/project/password_api.py': [Errno 2] No such file or directory
+ * Serving Flask app 'passwordapi'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Dec/2024 01:48:40] "GET /get_password HTTP/1.1" 200 -
+127.0.0.1 - - [25/Dec/2024 01:49:31] "GET /get_password HTTP/1.1" 200 -
+127.0.0.1 - - [25/Dec/2024 01:51:34] "GET /get_password HTTP/1.1" 200 -
+127.0.0.1 - - [25/Dec/2024 01:52:09] "GET /get_password HTTP/1.1" 200 -
+127.0.0.1 - - [25/Dec/2024 01:52:43] "GET /get_password HTTP/1.1" 200 -
+127.0.0.1 - - [25/Dec/2024 02:03:29] "GET /get_password HTTP/1.1" 200 -
+127.0.0.1 - - [25/Dec/2024 02:06:50] "GET /get_password HTTP/1.1" 200 -
+ * Serving Flask app 'passwordapi'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [27/Dec/2024 15:05:08] "GET /get_password HTTP/1.1" 200 -
