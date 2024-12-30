@@ -7,10 +7,9 @@ import json
 
 app = Flask(__name__)
 
-
 def generate_password():
     password = "".join(
-        random.choices(string.ascii_letters + string.digits, k=random.randint(3,5))
+        random.choices(string.ascii_letters + string.digits, k=random.randint(2,4))
     )
     return hashlib.md5(password.encode()).hexdigest()
 
