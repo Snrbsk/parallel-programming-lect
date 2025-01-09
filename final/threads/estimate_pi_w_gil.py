@@ -1,6 +1,8 @@
 import threading
 import random
 import numpy as np
+import time
+import os
 
 
 class PiEstimatorThread(threading.Thread):
@@ -81,10 +83,13 @@ class PiEstimator(threading.Thread):
 
 if __name__ == "__main__":
     pi_estimator = PiEstimator(
-        desired_accuracy=1.0e-3,
-        number_of_threads=8,
+        desired_accuracy=1.0e-5,
+        number_of_threads=os.cpu_count(),
         chunk_size=10000000,
         name="Pi Estimator",
     )
+    start_time = time.time()
     pi_estimator.start()
     pi_estimator.join()
+    end_time = time.time()
+    print(f"Toplam zaman: {end_time - start_time}")

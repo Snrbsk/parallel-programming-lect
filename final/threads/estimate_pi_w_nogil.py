@@ -1,13 +1,21 @@
-import threading, random, numpy as np
+import threading
+import random
+import numpy as np
 from numba import jit
+import time
+import os
 
 class PiEstimatorThread(threading.Thread):
-    def __init__(self, name="Generator",
-        number_of_points: int = 100000, ):
+    def __init__(
+        self,
+        number_of_points: int = 100000,
+        name="Generator",
+    ):
         super().__init__(name=name)
         self.number_of_points = number_of_points
         self.inner_points = 0
         self.total_points = 0
+
     @staticmethod
     @jit(nopython=True, nogil=True)
     def generate_points(n):
@@ -20,13 +28,21 @@ class PiEstimatorThread(threading.Thread):
                 inner_points += 1
             total_points += 1
         return inner_points, total_points
+
     def run(self):
         self.inner_points, self.total_points = self.generate_points(
-            self.number_of_points)
+            self.number_of_points
+        )
+
+
 class PiEstimator(threading.Thread):
-    def __init__( self, desired_accuracy: float = 1.0e-4,
-        number_of_threads: int = 4, chunk_size: int = 100000,
-        name="PI Estimator",):
+    def __init__(
+        self,
+        desired_accuracy: float = 1.0e-4,
+        number_of_threads: int = 4,
+        chunk_size: int = 100000,
+        name="PI Estimator",
+    ):
         super().__init__(name=name)
         self.desired_accuracy = desired_accuracy
         self.number_of_threads = number_of_threads
@@ -34,11 +50,16 @@ class PiEstimator(threading.Thread):
         self.inner_points = 0
         self.total_points = 0
         self.generated_threads = 0
+
     def pi(self):
-        try: return 4 * self.inner_points / self.total_points
-        except ZeroDivisionError: return 0.0
+        try:
+            return 4 * self.inner_points / self.total_points
+        except ZeroDivisionError:
+            return 0.0
+
     def accuracy(self):
         return abs(np.pi - self.pi())
+
     def run(self):
         while self.accuracy() > self.desired_accuracy:
             threads = []
@@ -46,14 +67,18 @@ class PiEstimator(threading.Thread):
                 threads.append(
                     PiEstimatorThread(
                         number_of_points=self.chunk_size,
-                        name=f"Generator - {self.generated_threads}", )
+                        name=f"Generator - {self.generated_threads}",
+                    )
                 )
                 self.generated_threads += 1
-            for thread in threads: thread.start()
-            for thread in threads: thread.join()
+            for thread in threads:
+                thread.start()
+            for thread in threads:
+                thread.join()
             for thread in threads:
                 self.inner_points += thread.inner_points
                 self.total_points += thread.total_points
+
     def join(self, timeout=None):
         super().join()
         print(f"Final estimation of Pi: {self.pi()}")
@@ -61,9 +86,17 @@ class PiEstimator(threading.Thread):
         print(f"Number of total points: {self.total_points}")
         print(f"Number of inner points: {self.inner_points}")
         print(f"Number of threads: {self.generated_threads}")
+
+
 if __name__ == "__main__":
-    pi_estimator = PiEstimator( desired_accuracy=1.0e-8,
-        number_of_threads=16, chunk_size=10000000,
-        name="Pi Estimator", )
+    pi_estimator = PiEstimator(
+        desired_accuracy=1.0e-5,
+        number_of_threads=os.cpu_count(),
+        chunk_size=10000000,
+        name="Pi Estimator",
+    )
+    start_time = time.time()
     pi_estimator.start()
     pi_estimator.join()
+    end_time = time.time()
+    print(f"Toplam zaman: {end_time - start_time}")
