@@ -14,11 +14,10 @@ def calculate_pi():
     if r < 1:
         inner += 1
         
-    return inner, total
+    yield 4 * inner / total
 
-for i in range(10000000):
+for i in range(10000):
     calculate_pi()
-    print(inner)
 pi = 4 * inner / total
 
 print(pi)
